@@ -11,6 +11,50 @@
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </head>
     <body>
-        
+        <div class="container box-border">
+            <div class="container inner-box">
+                Name:
+                <div id="first-name"></div> 
+                <div id="last-name"></div>
+                Address:
+                <div id="address-street"></div>
+                <div id="address-unit"></div>
+                <div id="address-city"></div>, 
+                <div id="address-state"></div> 
+                <div id="address-zip"></div>
+                Birthday: <div id="birthday"></div>
+                Education: <div id="education"></div>
+                Height:<br>
+                Feet: <div id="feet" ></div> 
+                Inches: <div id="inches"></div>
+                Phone Number: <div id="phone"></div>
+                Email: <div id="email"></div>
+            </div>
+        </div>
+    <script>
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        document.getElementById("first-name").innerHTML = getParameterByName('first-name');
+        document.getElementById("last-name").innerHTML = getParameterByName('last-name');
+        document.getElementById("address-street").innerHTML = getParameterByName('address-street');
+        document.getElementById("address-unit").innerHTML = getParameterByName('address-unit');
+        document.getElementById("address-city").innerHTML = getParameterByName('address-city');
+        document.getElementById("address-state").innerHTML = getParameterByName('address-state');
+        document.getElementById("address-zip").innerHTML = getParameterByName('address-zip');
+        document.getElementById("birthday").innerHTML = getParameterByName('birthday');
+        document.getElementById("education").innerHTML = getParameterByName('education');
+        document.getElementById("feet").innerHTML = getParameterByName('feet');
+        document.getElementById("inches").innerHTML = getParameterByName('inches');
+        document.getElementById("phone").innerHTML = getParameterByName('phone');
+        document.getElementById("email").innerHTML = getParameterByName('email');
+    </script>
     </body>
 </html>
