@@ -20,7 +20,7 @@
         </header>
         <div class="container box-border">
             <div class="container inner-box">
-                <form class="survey-form" action="display.html" method="GET" onsubmit="return checkForm()">
+                <form class="survey-form" action="display.html" method="GET" onsubmit="return checkEmailMatch()">
                     <div class="row">
                         <div class="col-md-6">
                             <label for="first-name">First Name *</label>
@@ -134,7 +134,7 @@
                     <input type="email" class="form-control input-field" id="email"  name="email" placeholder="address@company.com" maxlength="40" required>
                     <label for="email-validation">Confirm Email *</label>
                     <input type="email" class="form-control input-field" id="email-validation"  name="email-validation" placeholder="Confirm your Email" onChange="checkEmailMatch();" maxlength="40" required>
-                    <div id="divCheckEmailMatch"></div>
+                    <p id="divCheckEmailMatch"></p>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="check-box" required>
                         <label class="form-check-label" for="check-box"> I agree to the terms and conditions. *</label>
