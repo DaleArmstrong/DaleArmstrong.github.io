@@ -29,6 +29,10 @@ h1 {
     font-size: 15px
 }
 
+.inline-div {
+    display:inline-block;
+}
+
 textarea:focus,
 input[type="text"]:focus,
 input[type="password"]:focus,
@@ -89,7 +93,7 @@ select {
     .text-center {
         text-align: center;
     }
-    
+
     h1 {
         font-size: 24px;
     }

@@ -11,26 +11,29 @@
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </head>
     <body>
+        <div class="container col-md-12">
+            <header>
+                <h1>“Results verification page <div id="first-name" class="inline-div"></div> <div id="last-name" class="inline-div"></div>
+                </h1>
+            </header>
         <div class="container box-border">
             <div class="container inner-box">
-                Name:
-                <div id="first-name"></div> 
-                <div id="last-name"></div>
-                Address:
-                <div id="address-street"></div>
-                <div id="address-unit"></div>
-                <div id="address-city"></div>, 
-                <div id="address-state"></div> 
-                <div id="address-zip"></div>
-                Birthday: <div id="birthday"></div>
-                Education: <div id="education"></div>
-                Height:<br>
-                Feet: <div id="feet" ></div> 
-                Inches: <div id="inches"></div>
-                Phone Number: <div id="phone"></div>
-                Email: <div id="email"></div>
+                <div class="row">Address:</div>
+                <div class="row"><div id="address-street"></div></div>
+                <div class="row"><div id="address-unit"></div></div>
+                <div class="row">
+                    <div id="address-city" class="inline-div"></div>, 
+                    <div id="address-state" class="inline-div"></div> 
+                    <div id="address-zip" class="inline-div"></div>
+                </div>
+                <div class="row">Birthday: <div id="birthday"></div></div>
+                <div class="row">Education: <div id="education"></div></div>
+                <div class="row">Height: <div id="feet" class="inline-div"></div> &nbsp; feet and <div id="inches" class="inline-div"></div> &nbsp; inches</div>
+                <div class="row">Phone Number: <div id="phone"></div></div>
+                <div class="row">Email: <div id="email"></div></div>
             </div>
         </div>
+    </div>
     <script>
         function getParameterByName(name, url) {
             if (!url) url = window.location.href;
