@@ -15,11 +15,6 @@ h1 {
     margin-top: 5px;
 }
 
-div#map {
-    width: 100%;
-    height: 100%;
-}
-
 .box-border {
     border: 1px solid #455A64;
     padding: 10px;
@@ -63,7 +58,6 @@ select {
     color: rgb(245, 245, 245);
 }
 
-
 .blue-link {
     color: #00A5F9;
     text-decoration-line: none;
@@ -74,6 +68,11 @@ select {
     text-align: none;
 }
 
+.map-size {
+    width: 300px;
+    height: 200px;
+}
+
 .g-recaptcha {
     display: inline-block;
 }
@@ -81,6 +80,11 @@ select {
 @media (min-width: 768px) {
     .text-center {
         text-align: center;
+    }
+
+    .map-size {
+        width: 500px;
+        height: 400px;
     }
 
     h1 {
@@ -93,6 +97,11 @@ select {
         text-align: center;
     }
 
+    .map-size {
+        width: 600px;
+        height: 400px;
+    }
+
     h1 {
         font-size: 18px;
     }
@@ -101,6 +110,11 @@ select {
 @media (min-width: 1200px) {
     .text-center {
         text-align: center;
+    }
+
+    .map-size {
+        width: 700px;
+        height: 500px;
     }
 
     h1 {
