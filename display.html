@@ -84,18 +84,20 @@
                 mapLocation = mapLocation + unit + ', ';
             mapLocation = mapLocation + city + ', ' + state + ', ' + zip;
             mapLocation = encodeURI(mapLocation);
+            mapLocation = "http://nominatim.openstreetmap.org/search?format=json&q=" + mapLocation;
             alert(mapLocation);
-        };
+        } else {
+            setMap();
+        }
 
-        $.getJSON('http://nominatim.openstreetmap.org/search?format=json&q=' + mapLocation, function(data) {
-            alert('http://nominatim.openstreetmap.org/search?format=json&q=' + mapLocation);
+        $.getJSON(mapLocation, function(data) {
             if ('lon' in data) {
                 alert("there is lon");
                 alert(data['lon']);
                 longitude = data['lon'];
                 latitude = data['lat'];
+                setMap();
             }
-            setMap();
         });
 
         function setMap() {
