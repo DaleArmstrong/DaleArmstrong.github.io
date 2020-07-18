@@ -1,0 +1,84 @@
+body {
+    background-color: #181a1b;
+    color: rgb(245, 245, 245);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 1px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.box-border {
+    border: 1px solid #455A64;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #212F3C;
+}
+
+.input-field {
+    background-color: #1C1C1C;
+    height: 35px;
+    border-radius: 5px;
+    border-width: 0px;
+    margin-bottom: 5px;
+    color: rgb(210, 210, 210);
+    font-weight: 475;
+    font-size: 15px
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+option,
+select {
+    background-color: #1C1C1C;
+    color: rgb(245, 245, 245);
+}
+
+
+.blue-link {
+    color: #00A5F9;
+    text-decoration-line: none;
+    font-weight: 500
+}
+
+.text-center {
+    text-align: center;
+}
+
+.g-recaptcha {
+    display: inline-block;
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 992px) {
+    h1 {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1200px) {
+    h1 {
+        font-size: 24px;
+    }
+}
