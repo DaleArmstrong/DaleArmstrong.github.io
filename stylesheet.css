@@ -58,6 +58,10 @@ select {
     color: rgb(245, 245, 245);
 }
 
+b {
+    font-weight: 550;
+}
+
 .blue-link {
     color: #00A5F9;
     text-decoration-line: none;
