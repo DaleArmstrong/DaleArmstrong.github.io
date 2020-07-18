@@ -58,7 +58,7 @@ select {
 }
 
 .text-center {
-    text-align: center;
+    text-align: none;
 }
 
 .g-recaptcha {
@@ -66,18 +66,30 @@ select {
 }
 
 @media (min-width: 768px) {
+    .text-center {
+        text-align: center;
+    }
+
     h1 {
         font-size: 16px;
     }
 }
 
 @media (min-width: 992px) {
+    .text-center {
+        text-align: center;
+    }
+
     h1 {
         font-size: 18px;
     }
 }
 
 @media (min-width: 1200px) {
+    .text-center {
+        text-align: center;
+    }
+    
     h1 {
         font-size: 24px;
     }
