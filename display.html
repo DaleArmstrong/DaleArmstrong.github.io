@@ -87,13 +87,14 @@
             mapLocation = "https://nominatim.openstreetmap.org/search?format=json&q=" + mapLocation;
 
             $.getJSON(mapLocation, function(data) {
+                alert(data);
                 if ('lon' in data) {
-                    alert("there is lon " + data['lon']);
+                    console.log("there is lon " + data['lon']);
                     longitude = data['lon'];
                     latitude = data['lat'];
                     setMap();
                 } else {
-                    alert("something happened");
+                    console.log("something happened");
                 }
             });
         } else {
