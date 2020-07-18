@@ -28,10 +28,9 @@
                         <div id="address-state" class="inline-div"></div> &nbsp;
                         <div id="address-zip" class="inline-div"></div>
                     </div>
-                    <br>
                     <div class="row">Birthday:&nbsp; <div id="birthday"></div></div>
                     <div class="row">Education: &nbsp;<div id="education"></div></div>
-                    <div class="row">Height:&nbsp; <div id="feet" class="inline-div"></div> &nbsp; feet and <div id="inches" class="inline-div"></div> &nbsp; inches</div>
+                    <div class="row">Height:&nbsp; <div id="feet" class="inline-div"></div> &nbsp; feet and &nbsp;<div id="inches" class="inline-div"></div> &nbsp; inches</div>
                     <div class="row">Phone Number:&nbsp; <div id="phone"></div></div>
                     <div class="row">Email: &nbsp;<div id="email"></div></div>
                 </div>
@@ -84,10 +83,14 @@
             if (unit != '' && unit != null) 
                 mapLocation = mapLocation + unit + ', ';
             mapLocation = mapLocation + city + ', ' + state + ', ' + zip;
+            alert(mapLocation)
         }
 
         $.getJSON('http://nominatim.openstreetmap.org/search?format=json&q=' + mapLocation, function(data) {
+            alert('http://nominatim.openstreetmap.org/search?format=json&q=' + mapLocation);
             if ('lon' in data) {
+                alert("there is lon");
+                alert(data['lon']);
                 longitude = data['lon'];
                 latitude = data['lat'];
             }
