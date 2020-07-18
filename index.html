@@ -157,11 +157,13 @@
             var confirmEmail = $("#email-validation").val();
 
             if (firstEmail != confirmEmail) { 
-                $("#divCheckEmailMatch").html("Emails do not match!");
+                var str = "Emails do not match!".fontcolor("red");
+                $("#divCheckEmailMatch").html(str);
                 return false;
             }
             else {
-                $("#divCheckEmailMatch").html("Emails match.");
+                var str = "Emails match.".fontcolor("green");
+                $("#divCheckEmailMatch").html(str);
                 return true;
             }
             
