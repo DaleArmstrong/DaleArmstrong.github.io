@@ -84,7 +84,7 @@
                 mapLocation = mapLocation + unit + ', ';
             mapLocation = mapLocation + city + ', ' + state + ', ' + zip;
             mapLocation = encodeURI(mapLocation);
-            mapLocation = "http://nominatim.openstreetmap.org/search?format=json&q=" + mapLocation;
+            mapLocation = "https://nominatim.openstreetmap.org/search?format=json&q=" + mapLocation;
 
             $.getJSON(mapLocation, function(data) {
                 if ('lon' in data) {
