@@ -83,8 +83,9 @@
             if (unit != '' && unit != null) 
                 mapLocation = mapLocation + unit + ', ';
             mapLocation = mapLocation + city + ', ' + state + ', ' + zip;
-            alert(mapLocation)
-        }
+            mapLocation = encodeURI(mapLocation);
+            alert(mapLocation);
+        };
 
         $.getJSON('http://nominatim.openstreetmap.org/search?format=json&q=' + mapLocation, function(data) {
             alert('http://nominatim.openstreetmap.org/search?format=json&q=' + mapLocation);
@@ -110,7 +111,7 @@
                 tileSize: 512,
                 zoomOffset: -1
             }).addTo(mymap);
-        }
+        };
         
     </script>
     </body>
