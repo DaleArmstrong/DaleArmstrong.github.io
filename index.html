@@ -19,7 +19,7 @@
         </header>
         <div class="container box-border">
             <div class="container inner-box">
-                <form class="survey-form" method="POST">
+                <form class="survey-form" action="display.html" method="GET">
                     <div class="row">
                         <div class="col-md-6">
                             <label for="first-name">First Name *</label>
@@ -33,7 +33,7 @@
                     <label for="address-street">Street Address *</label>
                     <input type="text" class="form-control input-field" id="address-street" name="address-street" pattern="[a-zA-Z0-9]+" maxlength=40 placeholder="Street Address" required>
                     <label for="address-unit">Unit (Optional)</label>
-                    <input type="text" class="form-control input-field" id="address-unit" name="address-unit" pattern="[a-zA-Z0-9]+" maxlength=40 placeholder="Apartment, Unit, etc.." required>
+                    <input type="text" class="form-control input-field" id="address-unit" name="address-unit" pattern="[a-zA-Z0-9]+" maxlength=40 placeholder="Apartment, Unit, etc..">
                     <div class="row">
                         <div class="col-md-6">
                             <label for="address-city">City *</label>
@@ -120,17 +120,17 @@
                     <div class="row">
                         <div class="col-md-2">
                             <label for="feet">Feet</label>
-                            <input type="text" class="form-control input-field" id="feet" name="feet" pattern="[0-9]{1}" maxlength=1 placeholder="Feet" required>
+                            <input type="text" class="form-control input-field" id="feet" name="feet" pattern="[0-9]{1}" maxlength=1 placeholder="Feet">
                         </div>
                         <div class="col-md-2">
                             <label for="inches">inches</label>
-                            <input type="text" class="form-control input-field" id="inches" name="inches" pattern="[0-9]+" maxlength=2 placeholder="inches" required>
+                            <input type="text" class="form-control input-field" id="inches" name="inches" pattern="[0-9]+" maxlength=2 placeholder="inches">
                         </div>
                     </div>
                     <label for="phone">Phone Number *</label>
                     <input type="tel" class="form-control input-field" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="555-555-5555" required>
                     <label for="email">Email*</label>
-                    <input type="email" class="form-control input-field" id="email"  name="email" placeholder="address@company.com" maxlength="40" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required>
+                    <input type="email" class="form-control input-field" id="email"  name="email" placeholder="address@company.com" maxlength="40" required>
                     <label for="email-validation">Confirm Email *</label>
                     <input type="email" class="form-control input-field" id="email-validation"  name = "email-validation" placeholder="Confirm your Email" maxlength="40" required>
                     <div class="form-check">
