@@ -121,11 +121,11 @@
                     <div class="row">
                         <div class="col-md-2">
                             <label for="feet">Feet</label>
-                            <input type="text" class="form-control input-field" id="feet" name="feet" pattern="[0-9]{1}" maxlength=1 placeholder="Feet">
+                            <input type="text" class="form-control input-field" id="feet" name="feet" pattern="[0-9]{1}" maxlength=1 value=0>
                         </div>
                         <div class="col-md-2">
                             <label for="inches">inches</label>
-                            <input type="text" class="form-control input-field" id="inches" name="inches" pattern="[0-9]+" maxlength=2 placeholder="inches">
+                            <input type="text" class="form-control input-field" id="inches" name="inches" pattern="[0-9]+" maxlength=2 value=0 oninput="checkInches()">
                         </div>
                     </div>
                     <label for="phone">Phone Number *</label>
@@ -166,7 +166,15 @@
                 $("#divCheckEmailMatch").html(str);
                 return true;
             }
-            
+        }
+
+        function checkInches() {
+            var inches = $("#inches").val();
+            if (inches < 0) {
+                document.getElementById("inches").value = "0";
+            } else if (inches > 11) {
+                document.getElementById("inches").value = "11";
+            }
         }
 
         $(document).ready(function () {
